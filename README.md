@@ -1,5 +1,46 @@
 # FormAngularIonic
 
+# Sistema de Cadastro de Produtores
+
+## Descrição
+
+Este é um sistema de cadastro de produtores agrícolas, construído com Angular 11.0 e Ionic 5.0.7. Ele permite o cadastro, visualização, edição e exclusão de informações sobre produtores agrícolas.
+* Obs: Como foi pedido, foi removido o nome e o símbolo da Defensoria Pública do Estado de São Paulo, tanto no home quanto no formulário, além das sessões com assinatura, foram tabmém removidos.
+
+## Pré-requisitos
+
+- [Node.js](https://nodejs.org/) instalado
+- [Angular CLI](https://angular.io/cli) instalado globalmente (`npm install -g @angular/cli`)
+- [Ionic CLI](https://ionicframework.com/docs/cli) instalado globalmente (`npm install -g @ionic/cli`)
+
+## Instalação e uso
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-cadastro-produtores.git
+   cd sistema-cadastro-produtores
+
+2. Instale as dependências:
+- npm install
+
+3. Inicie o servidor de desenvolvimento:
+- ng serve
+
+## Estrutura do código
+
+FormAngularIonic/
+- ├── src/                  # Código-fonte do aplicativo
+- │   ├── app/              # Componentes e módulos principais
+- │   ├── assets/           # Recursos estáticos (imagens, etc.)
+- │   ├── environments/     # Configurações de ambiente
+- │   ├── theme/            # Estilos do aplicativo
+- │   ├── index.html        # Página HTML principal
+- ├── .gitignore            # Arquivos e pastas ignorados pelo Git
+- ├── angular.json          # Configurações do Angular CLI
+- ├── ionic.config.json     # Configurações do Ionic CLI
+- ├── package.json          # Dependências e scripts do projeto
+- ├── README.md             # Documentação do projeto
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
 ## Development server
