@@ -1,0 +1,41 @@
+ion-content {
+    --ion-background-color: white;
+   
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #70c578; /* Cor do texto */
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .button-container ion-button {
+    margin-bottom: 15px;
+  }
+
+  .title {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 8px;
+    justify-content:center;
+    text-align: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 50px;
+    justify-content: center;
+    display: flex;
+}
+  

@@ -1,0 +1,338 @@
+<ion-content>
+    <div class="container">
+        <br>
+        <span class="title">FORMULÁRIO DE CADASTRO DE PRODUTOR</span><br>
+        <span class="subtitle">ORDEM DE SERVIÇO DDA 002/13</span>
+        <div class="dados-gerais">
+            <form [formGroup]="cadastroForm" (ngSubmit)="enviarFormulario()">
+                <span class="title-topics">1. Dados Gerais</span>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label position="floating">Nome do Produtor<span class="required-field">
+                                    *</span></ion-label>
+                            <ion-input formControlName="nome" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label>Tipo Produtor<span class="required-field"> *</span></ion-label>
+                            <ion-select label="Floating label" formControlName="tipoProdutor"
+                                placeholder="Escolha uma opção">
+                                <ion-select-option value="pessoaFisica">Pessoa Física</ion-select-option>
+                                <ion-select-option value="pessoaJuridica">Pessoa Jurídica</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">CNPJ/CPF<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="cpf" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">RG<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="rg" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Inscrição Estadual<span class="required-field">
+                                    *</span></ion-label>
+                            <ion-input formControlName="inscricao" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">N° INCRA<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="incra" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="9">
+                        <ion-item>
+                            <ion-label position="floating">Propriedade Rural<span class="required-field">
+                                    *</span></ion-label>
+                            <ion-input formControlName="propriedade" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label position="floating">Tipo Logradouro<span class="required-field">
+                                    *</span></ion-label>
+                            <ion-input formControlName="tipoLogradouro" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12" size-md="10">
+                        <ion-item>
+                            <ion-label position="floating">Logradouro<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="logradouro" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="2">
+                        <ion-item>
+                            <ion-label position="floating">Número</ion-label>
+                            <ion-input formControlName="numero" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">Bairro/Localidade/Distrito<span class="required-field">
+                                    *</span></ion-label>
+                            <ion-input formControlName="bairro"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">CEP<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="cep"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Município <span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="municipio"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label position="floating">Complemento</ion-label>
+                            <ion-input formControlName="complemento"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <!-- Endereço para correspondencia -->
+                <span class="title-topics">2. Endereço para correspondência</span>
+
+
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Endereço<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="endereco" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Bairro<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="bairroCorresp" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Município<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="municipioCorresp" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">CEP<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="cepCorresp" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">UF<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="ufCorresp" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Telefone<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="telefone" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Caixa Postal</ion-label>
+                            <ion-input formControlName="caixaPostal" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label position="floating" type="email" placeholder="email@domain.com">Endereço
+                                Eletrônico<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="enderecoEletronico" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <span class="title-topics">3. Atuação do Estabelecimento – Tipos de Agronegócios</span>
+
+                <ion-row>
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">Área(ha.)</ion-label>
+                            <ion-input formControlName="area"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="6" size-md="3">
+                        <ion-item>
+                            <ion-label position="floating">Especie Animal (Agronegócio)</ion-label>
+                            <ion-input formControlName="especieAnimal"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Saldo total</ion-label>
+                            <ion-input formControlName="saldoTotal"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label>Exploração Comercial</ion-label>
+                            <ion-select label="Floating label" formControlName="exploracaoComercial"
+                                placeholder="Escolha uma opção">
+                                <ion-select-option value="sim">SIM</ion-select-option>
+                                <ion-select-option value="nao">NÃO</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <span class="title-topics">4. Tipo de Propriedade</span>
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label>Tipo Propriedade</ion-label>
+                            <ion-select label="Floating label" formControlName="tipoPropriedade"
+                                placeholder="Escolha uma opção">
+                                <ion-select-option value="propria">PRÓPRIA</ion-select-option>
+                                <ion-select-option value="arrendada">ARRENDADA</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+
+
+                <!-- Propriedades condicionais para ARRENDADA -->
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Proprietário</ion-label>
+                            <ion-input formControlName="proprietario"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">CPF/CNPJ do Proprietário</ion-label>
+                            <ion-input formControlName="cpfCnpjProprietario"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label position="floating">Endereço da Propriedade</ion-label>
+                            <ion-input formControlName="enderecoPropriedade"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">Código SDA</ion-label>
+                            <ion-input formControlName="codigoSDA"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">N° Contrato Arrendamento</ion-label>
+                            <ion-input formControlName="contratoArrendamento"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <span class="title-topics">5. Responsabilidade pelas informações</span>
+
+                <ion-row>
+                    <ion-col size="12" size-md="12">
+                        <ion-item>
+                            <ion-label position="floating">Nome do Responsável<span class="required-field">
+                                    *</span></ion-label>
+                            <ion-input formControlName="nomeResponsavel"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">CPF<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="cpfResponsavel"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size="12" size-md="6">
+                        <ion-item>
+                            <ion-label position="floating">RG<span class="required-field"> *</span></ion-label>
+                            <ion-input formControlName="rgResponsavel"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12" size-md="6">
+                        <ion-button class="ion-button" expand="full" shape="round" color="secondary" type="submit"
+                            [disabled]="!cadastroForm.valid">Enviar</ion-button>
+                    </ion-col>
+                    <ion-col size="12" size-md="6">
+                        <ion-button class="ion-button" expand="full" shape="round" color="danger"
+                            (click)="limparCadastro()">Limpar Cadastro</ion-button>
+                    </ion-col>
+
+                </ion-row>
+
+            </form>
+        </div>
+    </div>
+</ion-content>

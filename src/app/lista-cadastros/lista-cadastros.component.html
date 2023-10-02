@@ -1,0 +1,51 @@
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let cadastro of cadastros">
+            <ion-label>
+                <h2>Dados Gerais</h2>
+                <p>{{ cadastro.nome }}</p>
+                <p>Tipo Produtor: {{ cadastro.tipoProdutor }}</p>
+                <p>CPF/CNPJ: {{ cadastro.cpf }}</p>
+                <p>RG: {{ cadastro.rg }}</p>
+                <p>Endereço:</p>
+                <p>{{ cadastro.inscricao }}, {{ cadastro.propriedade }}, {{ cadastro.tipoLogradouro }}</p>
+                <p>{{ cadastro.logradouro }} - {{ cadastro.complemento }}, {{ cadastro.numero }}</p>
+                <p>{{ cadastro.bairro }} - {{ cadastro.cep }}, {{ cadastro.municipio }}</p>
+
+
+                <h2>Endereço para correspondência</h2>
+                <p>Endereço: {{ cadastro.endereco }}, Bairro: {{ cadastro.bairroCorresp }}</p>
+                <p> Município: {{ cadastro.municipioCorresp }}, CEP: {{ cadastro.cepCorresp }}</p>
+                <p> UF: {{ cadastro.ufCorresp }}, Tel: {{cadastro.telefone}}, Caixa Postal: {{cadastro.caixaPostal}}</p>
+                <p> Endereço Eletrônico: {{cadastro.enderecoEletronico}} </p>
+
+
+                <h2>Atuação do Estabelecimento</h2>
+                <p>Área: {{ cadastro.area }},Espécie Animal: {{ cadastro.especieAnimal }}</p>
+                <p> Saldo Total: {{ cadastro.saldoTotal }}, Exploração Comercial: {{ cadastro.exploracaoComercial }}</p>
+
+
+                <h2>Tipo de Propriedade</h2>
+                <p *ngIf="cadastro.tipoPropriedade === 'arrendada'"></p>
+                <p>Proprietário: {{ cadastro.proprietario }}</p>
+                <p>CPF/CNPJ do Proprietário: {{ cadastro.cpfCnpjProprietario}},</p>
+                <p>Endereço da Propriedade: {{ cadastro.enderecoPropriedade }}</p>
+                <p> Código SDA: {{ cadastro.codigoSDA }}, N° Contrato Arrendamento: {{ cadastro.contratoArrendamento }}
+                </p>
+
+                <p *ngIf="cadastro.tipoPropriedade === 'propria'">
+                    {{cadastro.tipoPropriedade}}
+                </p>
+
+                <h2>Responsabilidade pelas informações</h2>
+                <p>Responsável: {{ cadastro.nomeResponsavel }}</p>
+                <p> CPF: {{ cadastro.cpfResponsavel }},RG: {{ cadastro.rgResponsavel }}</p>
+
+            </ion-label>
+            <ion-buttons slot="end">
+                <!-- <ion-button (click)="editarCadastro(cadastro.id)">Editar</ion-button> -->
+                <ion-button color="danger" (click)="excluirCadastro(cadastro.id)">Excluir</ion-button>
+            </ion-buttons>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+// Adicione a cor principal
+$cor-principal: #70c578;
+
+// Outras variáveis de cor com base na cor principal (opcional)
+$cor-secundaria: #408759;
+$cor-texto: #ffffff;
+
+// Defina o tema principal
+:root {
+  --ion-color-primary: $cor-principal;
+  --ion-color-primary-contrast: $cor-texto;
+  --ion-color-primary-shade: $cor-secundaria;
+  --ion-color-primary-tint: $cor-secundaria;
+}
+
+// Estilos globais (opcional)
+body {
+  --ion-background-color: #f4f4f4;
+}
+
+
