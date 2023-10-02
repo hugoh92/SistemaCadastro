@@ -18,35 +18,6 @@ export class FormDadosComponent implements OnInit {
     private dataService: DataService
   ) {
     this.cadastroForm = this.fb.group({
-     /*  tipoProdutor: ['', Validators.required],
-      nome: ['', Validators.required],
-      cpf: ['', [Validators.required]],
-      rg: ['', [Validators.required]],
-      inscricao: ['', [Validators.required]],
-      incra: ['', [Validators.required]],
-      propriedade: ['', [Validators.required]],
-      tipoLogradouro: ['', [Validators.required]],
-      logradouro: ['', [Validators.required]],
-      complemento: ['', [Validators.required]],
-      numero: ['', [Validators.required]],
-      bairro: ['', [Validators.required]],
-      cep: ['', [Validators.required]],
-      municipio: ['', [Validators.required]],
-      endereco: ['', [Validators.required]],
-      bairroCorresp: ['', [Validators.required]],
-      municipioCorresp: ['', [Validators.required]],
-      cepCorresp: ['', [Validators.required]],
-      ufCorresp: ['', [Validators.required]],
-      tipoPropriedade: ['', Validators.required],
-      proprietario: [''],
-      cpfCnpjProprietario: [''],
-      enderecoPropriedade: [''],
-      codigoSDA: [''],
-      contratoArrendamento: [''],
-      nomeResponsavel: [''],
-      cpfResponsavel: [''],
-      rgResponsavel: [''], */
-
       tipoProdutor: ['', Validators.required],
       nome: ['', Validators.required],
       cpf: ['', [Validators.required, Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)]],
@@ -82,19 +53,10 @@ export class FormDadosComponent implements OnInit {
       nomeResponsavel: ['', Validators.required],
       cpfResponsavel: ['', [Validators.required, Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)]],
       rgResponsavel: ['', [Validators.required, Validators.pattern(/^\d{1,9}$/)]],
-   
-      /* telefone: ['', [Validators.required, Validators.pattern(/^\d{10,}$/)]], */ 
-     /*  telefone: ['', [Validators.required]],  */
+
     });
   }
 
- /*  isPessoaFisica() {
-    return this.cadastroForm.get('tipoProdutor').value === 'pessoaFisica';
-  }
-
-  isPessoaJuridica() {
-    return this.cadastroForm.get('tipoProdutor').value === 'pessoaJuridica';
-  } */
   enviarFormulario() {
     if (this.cadastroForm.valid) {
       const novoCadastro = this.cadastroForm.value;
@@ -109,8 +71,8 @@ export class FormDadosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-}
+
+  }
 
 }
 

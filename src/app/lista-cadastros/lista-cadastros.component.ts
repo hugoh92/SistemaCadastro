@@ -11,11 +11,11 @@ import { Endereco } from '../Endereco.model';
 })
 export class ListaCadastrosComponent implements OnInit {
 
-  cadastros: Cadastro[]; 
+  cadastros: Cadastro[];
   cadastro?: Cadastro;
   route: any;
 
-  constructor(private router: Router, 
+  constructor(private router: Router,
     private dataService: DataService) {
     this.cadastros = this.dataService.getCadastros();
   }
@@ -24,13 +24,13 @@ export class ListaCadastrosComponent implements OnInit {
     this.cadastros = this.dataService.getCadastros();
   }
 
-/*   editarCadastro(cadastroId: string): void {
-    const cadastro = this.dataService.obterCadastroPorId(cadastroId);
-    this.modalController.openEdicaoCadastro(cadastro).then((dadosAtualizados) => {
-        this.dataService.atualizarCadastro(cadastroId, dadosAtualizados);
-        this.carregarCadastros();
-    });
-} */
+  /*   editarCadastro(cadastroId: string): void {
+      const cadastro = this.dataService.obterCadastroPorId(cadastroId);
+      this.modalController.openEdicaoCadastro(cadastro).then((dadosAtualizados) => {
+          this.dataService.atualizarCadastro(cadastroId, dadosAtualizados);
+          this.carregarCadastros();
+      });
+  } */
 
   excluirCadastro(id: string) {
     this.dataService.excluirCadastro(id);

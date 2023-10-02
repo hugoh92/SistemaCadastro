@@ -1,15 +1,11 @@
-// data.service.ts
+
 import { Injectable } from '@angular/core';
 import { Cadastro } from './Cadastro.model';
-// Defina uma interface para o tipo de dados que você está manipulando
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  /* private cadastros: Cadastro[] = []; */
-
   private cadastros: Cadastro[] = [
     {
       id: '1',
@@ -95,10 +91,6 @@ export class DataService {
   addCadastro(cadastro: Cadastro): void {
     this.cadastros.push(cadastro);
   }
-
-  /*   updateCadastro(index: number, novoCadastro: Cadastro): void {
-      this.cadastros[index] = novoCadastro;
-    } */
 
   updateCadastro(cadastro: Cadastro): void {
     const index = this.cadastros.findIndex(c => c.id === cadastro.id);
